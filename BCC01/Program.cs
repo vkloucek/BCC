@@ -58,7 +58,7 @@ namespace BCC01
 
                     var connections = new List<List<int>>();
 
-                    for (int f = 0; f < friends; f++)
+                    for (var f = 0; f < friends; f++)
                     {
                         if ((line = file.ReadLine()) == null)
                         {
@@ -79,21 +79,20 @@ namespace BCC01
                         }
 
                         connections.Add(listItem);
-
                     }
 
                     var setsOfConnectedFriedns = new List<HashSet<int>>();
 
-                    for (int f = 1; f <= connections.Count; f++)
+                    for (var f = 1; f <= connections.Count; f++)
                     {
-                        setsOfConnectedFriedns.Add(new HashSet<int> { f });
+                        setsOfConnectedFriedns.Add(new HashSet<int> {f});
                     }
 
                     int i;
 
                     for (i = 1; i <= 100; i++)
                     {
-                        for (int f = 1; f <= connections.Count; f++)
+                        for (var f = 1; f <= connections.Count; f++)
                         {
                             foreach (var alreadyConnected in setsOfConnectedFriedns[f - 1].ToArray())
                             {
