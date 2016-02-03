@@ -107,7 +107,7 @@ namespace BCC01
                         {
                             var friendsFullyConnected = new List<int>();
 
-                            for (int f = 1; f <= connections.Count; f++)
+                            for (var f = 1; f <= connections.Count; f++)
                             {
                                 if (setsOfConnectedFriedns[f - 1].Count == connections.Count)
                                 {
